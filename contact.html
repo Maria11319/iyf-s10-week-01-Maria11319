@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <hi>Contact Us</hi>
+
+    <form>
+        <fielset>
+            <legend>Personal information</legend>
+
+            <label for="subject">Subject *</label>
+            <select id="subject"name="subject" required>
+                <option value='''>select a subject</option> 
+                <option value="general">General Inquiry</option>    
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+                </select>   
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message"
+                placeholder="Enter your message(minimum 50 characters)"
+                minleghth="50" required></textarea> 
+
+                <label>
+                    <input type="checkbox"name="newsletter">
+                    subscribe to our newsletter
+                    </label>
+                    </fieldset>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                </body>
+                </html>
+                
