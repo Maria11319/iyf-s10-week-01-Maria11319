@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Maria - contact</title>
-        <link rel="stylesheet" href="styles.css">
-        </head>
-        <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-            <nav>
-                <a href="index.html">home</a>
-                <a href="about.html">about</a>
-                <a href="projects.html">projects</a>
-                <a href="contact.html"><strong>contact</strong></a>
-            </nav>
+    <nav>
+        <div class="logo">Maria Dev</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html"><strong>Contact</strong></a></li>
+        </ul>
+    </nav>
 
-            <main>
-                <h1>contact me</h1>
+    <main>
+        <h1>Contact Me</h1>
 
-                <section>
-                    <h2>get in touch</h2>
-                    <p>location:Nairobi, Kenya| timezone:EAT(UTC+3)</p>
-                    <P>
-                        <a href="hppts://github.com/Maria11319">GitHub</a>|
-                        <a href="mailto:mariajones3197@gmail.com">Email Me</a>
-                        </P>
-                        </section>
+        <div class="contact-wrapper">
 
-                        <section>
-                            <h2>send a message</h2>
-                            <form>
-                                <fieldset>
-                                    <legend>personal information</legend>
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <address>
+                    <p>
+                        <strong>Maria Jones</strong><br>
+                        Nairobi, Kenya<br>
+                        Timezone: EAT (UTC+3)
+                    </p>
+                    <p>Email: <a href="mailto:mariajones3197@gmail.com">
+                    mariajones3197@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+254700000000">
+                    +254 700 000 000</a></p>
+                </address>
 
-                                    <label for="fullname">full name*</label>
-                                    <input type="text"id="fullname"="fullname"
-                                    placeholder="Enter your full name"required>
+                <h2>Social Media</h2>
+                <ul>
+                    <li><a href="https://github.com/Maria11319">GitHub</a></li>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://linkedin.com">LinkedIn</a></li>
+                </ul>
+            </div>
 
-                                    <label for="email">email*</label>
-                                    <input type="email"id="email" name="email"
-                                    placeholder="enter your email adresss"required>
+            <div>
+                <h2>Send a Message</h2>
+                <form>
+                    <fieldset>
+                        <legend>Personal Information</legend>
 
-                                    <label for="phone">phone(optional)</label>
-                                    <input type="tel"id="phone"name="phone"
-                                    placeholder="enter your phone number">
-                                    </fieldset>
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname"
+                        placeholder="Enter your full name" required>
 
-                                    <fieldset>
-                                        <legend>message details</legend>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email"
+                        placeholder="Enter your email address" required>
 
-                                        <label for="subject">subject*</label>
-                                        <select id="subject"name="subject"reqiured>
-                                            <option value='''>select a subject</option>
-                                            <option value="general">genral inquiry</option>
-                                            <option value="support">support</option>
-                                            <option value="feedback">feedback</option>
-                                            </select>
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone"
+                        placeholder="Enter your phone number">
+                    </fieldset>
 
-                                            <label for="message">message*</label>
-                                            <textarea id="message" name="message"
-                                            placeholder="enter your message(minimum 50 characters)"
-                                            minilenghth="50"required></textarea>
+                    <fieldset>
+                        <legend>Message Details</legend>
 
-                                            <label>
-                                                <lnput type="checkbox"name="newsletter">
-                                                    subscribe to our newsletter
-                                                </label>
-                                                </fieldset>
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Support</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
 
-                                                <button type="submit">send message</button>
-                                                </form>
-                                                </section>
-                                                </main>
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message"
+                        placeholder="Enter your message (minimum 50 characters)"
+                        minlength="50" required></textarea>
 
-                                            </footer>
-                                        </section>
-                                    </main>
+                        <label>
+                            <input type="checkbox" name="newsletter">
+                            Subscribe to our newsletter
+                        </label>
+                    </fieldset>
 
-                                    <footer>
-                                        <p>@2026 Maria.All rights are reserved</p>
-                                        </footer>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
 
-                                        </body>
-                                        </html>
-                                        
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Maria. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
