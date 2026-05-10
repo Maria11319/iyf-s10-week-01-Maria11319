@@ -226,3 +226,66 @@ footer {
         padding: 60px 40px;
     }
 }
+/* ================================
+   Task 4.4: Polish & Refinement
+================================ */
+
+/* Transitions */
+button,
+a,
+.project-card {
+    transition: all 0.3s ease;
+}
+
+/* Hover States - Buttons */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Hover States - Links */
+a:hover {
+    color: var(--color-primary);
+}
+
+/* Hover States - Cards */
+.project-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+/* Focus States - Accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Consistent Spacing */
+section {
+    margin-bottom: 30px;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+}
