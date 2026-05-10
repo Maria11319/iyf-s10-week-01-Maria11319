@@ -1,7 +1,7 @@
 /* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
 
-/* Color Scheme */
+/* Color & Font Variables */
 :root {
     --color-primary: #0077cc;
     --color-primary-light: #3399ff;
@@ -10,13 +10,8 @@
     --color-background: #f9f9f9;
     --color-text: #222222;
     --color-muted: #888888;
-
-    /* Type Scale */
-    --font-xs: 0.75rem;
     --font-sm: 0.875rem;
     --font-base: 1rem;
-    --font-lg: 1.125rem;
-    --font-xl: 1.25rem;
     --font-2xl: 1.5rem;
     --font-3xl: 1.875rem;
     --font-4xl: 2.25rem;
@@ -29,7 +24,7 @@
     box-sizing: border-box;
 }
 
-/* Base */
+/* Base - Mobile First */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: var(--font-base);
@@ -38,30 +33,20 @@ body {
     background-color: var(--color-background);
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     color: var(--color-primary-dark);
     margin-bottom: 16px;
 }
 
-h1 { font-size: var(--font-4xl); font-weight: 700; }
-h2 { font-size: var(--font-3xl); font-weight: 600; }
-h3 { font-size: var(--font-2xl); font-weight: 600; }
+h1 { font-size: var(--font-3xl); }
+h2 { font-size: var(--font-2xl); }
 
-/* Body text */
 p {
-    font-size: var(--font-base);
-    color: var(--color-text);
     margin-bottom: 16px;
+    font-size: var(--font-base);
 }
 
-small {
-    font-size: var(--font-sm);
-    color: var(--color-muted);
-}
-
-/* Links */
 a {
     color: var(--color-primary);
     text-decoration: none;
@@ -72,16 +57,172 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Buttons */
 button {
     background-color: var(--color-primary);
-    color: #ffffff;
+    color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: var(--font-base);
+    width: 100%;
 }
 
 button:hover {
     background-color: var(--color-primary-dark);
+}
+
+/* Navigation - Mobile */
+nav {
+    background-color: var(--color-primary);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+nav ul li a {
+    color: white;
+    display: block;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+/* Hero - Mobile */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.hero h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Projects grid - Mobile: 1 column */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: white;
+}
+
+.project-card img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Contact - Mobile: full width form */
+.contact-wrapper {
+    display: block;
+    padding: 20px;
+}
+
+form {
+    width: 100%;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-size: var(--font-base);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* ================================
+   Tablet - 768px and above
+================================ */
+@media (min-width: 768px) {
+
+    nav ul {
+        flex-direction: row;
+        width: auto;
+    }
+
+    button {
+        width: auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 { font-size: var(--font-4xl); }
+}
+
+/* ================================
+   Desktop - 1024px and above
+================================ */
+@media (min-width: 1024px) {
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 60px 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+    }
+
+    main {
+        padding: 40px;
+    }
+}
+
+/* ================================
+   Large Desktop - 1280px and above
+================================ */
+@media (min-width: 1280px) {
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
 }
